@@ -1,0 +1,44 @@
+.panel {
+  border: 1px solid #f1f1f1;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 3px;
+  background: #fff;
+  display: flex;
+}
+​
+p {
+  color: #4386bf;
+}
+h5 {
+  color: gray;
+}
+​
+.meta-panel {
+  display: flex;
+  color: #4386bf;
+}
+.meta {
+  margin-right: 30px;
+  padding-right: 10px;
+  border-right: 1px solid #e8e8e8;
+}
+​
+.first {
+  width: 60%;
+}
+​
+.second {
+  width: 20%;
+}
+​
+.third {
+  width: 20%;
+}
+​
+.third button {
+  padding: 10px;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #0290ff;
+}
