@@ -5,7 +5,6 @@ import { changeFilter, removeBook } from '../actions'
 import CategoryFilter from '../components/CategoryFilter';
 
 
-
 const filteredBooks = (books, filter) => {
   if(filter === 'All') {
     return books;
@@ -41,18 +40,7 @@ class BooksList extends React.Component {
     return(
       <div>
       <CategoryFilter handleFilterChange={this.handleFilterChange}/>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>Category</th>
-            </tr>
-          </thead>
-          <tbody>
-            {books}
-          </tbody>
-        </table>
+      <div>{books}</div>
       </div>
     )
   }

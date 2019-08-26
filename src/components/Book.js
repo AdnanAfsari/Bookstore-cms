@@ -1,8 +1,10 @@
 import React from 'react';
 import classes from './Book.css';
+
 class Book extends React.Component {
   render() {
     const book = this.props.book;
+
     return(
       <div className="panel">
         <div className="first">
@@ -25,4 +27,9 @@ class Book extends React.Component {
     )
   }
 }
+
+
+
+
+
 export default Book;
