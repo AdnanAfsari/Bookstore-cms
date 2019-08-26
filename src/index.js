@@ -19,6 +19,7 @@ const INITIAL_STATE = {
     { id: generateID(), title: "Why Men want Sex and Women want Love", category: "Learning" },
     { id: generateID(), title: "Life 3.0", category: "Sci-Fi" }
   ],
+  filter: 'All'
 }
 
 const store = createStore(rootReducer, INITIAL_STATE);
