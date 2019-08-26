@@ -2,6 +2,6 @@ import {combineReducers} from 'redux'
 import books from './books'
 
 
-export defualt combineReducers({
+export default combineReducers({
   books
 })

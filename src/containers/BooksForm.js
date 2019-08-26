@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-​
-​
+
+
 const bookCategories = [
   "Action",
   "Biography",
@@ -11,14 +11,14 @@ const bookCategories = [
   "Learning",
   "Sci-Fi"
 ];
-​
-​
+
+
 class BooksForm extends React.Component {
   render() {
     const bookOptions = bookCategories.map((category) => {
       return <option key={`book-category-${category}`} value={category}>{category}</option>
     });
-​
+
     return (
       <div>
         <h3>Books form:</h3>
@@ -31,7 +31,7 @@ class BooksForm extends React.Component {
     )
   }
 }
-​
-​
-​
+
+
+
 export default connect()(BooksForm);
