@@ -10,15 +10,12 @@ class Book extends React.Component {
         <td>{book.title}</td>
         <td>{book.category}</td>
         <td>
-        remove
+          <button onClick={() => this.props.handleBookRemove(book)}>Remove Book</button>
         </td>
       </tr>
     )
   }
 }
-
-
-
 
 
 export default Book;
