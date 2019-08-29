@@ -15,50 +15,28 @@ const filteredBooks = (books, filter) => {
   }
 }
 
+const BooksList = (props) => {
+  const handleFilterChange = (event) => props.changeFilter(event.target.value);
+  const handleBookRemove = (book) => props.removeBook(book);
 
-class BooksList extends React.Component {
-  constructor(props) {
-    super(props);
+  const books = filteredBooks(props.books, props.filter).map((book) => {
+    return <Book key={book.id} book={book} handleBookRemove={handleBookRemove} />;
+  });
 
-    this.handleFilterChange = this.handleFilterChange.bind(this);
-    this.handleBookRemove = this.handleBookRemove.bind(this);
-  }
-
-  handleFilterChange(event) {
-    this.props.changeFilter(event.target.value);
-  }
-
-  handleBookRemove(book) {
-    this.props.removeBook(book)
-  }
-
-  render() {
-    const books = filteredBooks(this.props.books, this.props.filter).map((book) => {
-      return <Book key={book.id} book={book} handleBookRemove={this.handleBookRemove} />;
-    });
-
-    return(
-      <div>
-      <CategoryFilter handleFilterChange={this.handleFilterChange}/>
-      <div>{books}</div>
-      </div>
-    )
-  }
+  return(
+    <div>
+    <CategoryFilter handleFilterChange={handleFilterChange}/>
+    <div>{books}</div>
+    </div>
+  )
 }
 
-const mapStateToProps = (state, ownProps) => {
+
+const mapStateToProps = (state) => {
   return {
     books: state.books,
     filter: state.filter
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    changeFilter: filter => dispatch(changeFilter(filter)),
-    removeBook: book => dispatch(removeBook(book))
-  }
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
+export default connect(mapStateToProps, { changeFilter, removeBook })(BooksList);

@@ -1,22 +1,14 @@
 import React from 'react';
+import { bookCategories } from '../utils'
 
 
-const bookCategories = [
-  "Action",
-  "Biography",
-  "History",
-  "Horror",
-  "Kids",
-  "Learning",
-  "Sci-Fi"
-];
 
 const filterCategories = [...['All'], ...bookCategories];
 
 class CategoryFilter extends React.Component {
   render() {
     const filterOptions = filterCategories.map((category) => {
-      return <option key={`filter-category-${category}`} value={category}>{category}</option>
+      return <option key={category} value={category}>{category}</option>
     });
 
     return (

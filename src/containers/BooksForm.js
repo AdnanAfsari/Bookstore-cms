@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
+import { bookCategories, generateID } from '../utils'
 
 const styles = {
   input: {
@@ -16,28 +17,12 @@ const styles = {
     fontSize: "18px"
   },
   button: {
-    padding: "10px",
     width: "18%",
     background: "#0290ff",
     color: "#fff",
     padding: "16px",
     fontSize: "18px"
   }
-}
-
-
-const bookCategories = [
-  "Action",
-  "Biography",
-  "History",
-  "Horror",
-  "Kids",
-  "Learning",
-  "Sci-Fi"
-];
-
-const generateID = () => {
-  return Math.floor((Math.random() * 1000) + 1);
 }
 
 
@@ -80,15 +65,15 @@ class BooksForm extends React.Component {
 
   render() {
     const bookOptions = bookCategories.map((category) => {
-      return <option key={`book-category-${category}`} value={category}>{category}</option>
+      return <option key={category} value={category}>{category}</option>
     });
 
     return (
       <div>
         <h3>ADD NEW BOOK</h3>
         <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} style={styles.input} type="text" name="title" />
-          <select onChange={this.handleChange} style={styles.select} name="category">{bookOptions}</select>
+          <input onChange={this.handleChange} style={styles.input} type="text" name="title" placeholder="Title" />
+          <select onChange={this.handleChange} style={styles.select} name="category" value="category">{bookOptions}</select>
           <input style={styles.button} type="submit" value="ADD BOOK"/>
         </form>
       </div>
@@ -97,12 +82,5 @@ class BooksForm extends React.Component {
 }
 
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    createBook: book => dispatch(createBook(book))
-  }
-};
 
-
-
-export default connect(null, mapDispatchToProps)(BooksForm);
+export default connect(null, {createBook})(BooksForm);
