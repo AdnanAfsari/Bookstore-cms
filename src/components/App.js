@@ -3,7 +3,8 @@ import './App.css';
 import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
       <div className="App-header">

@@ -1,12 +1,10 @@
 import React from 'react';
 import './Book.css';
 
-
 const Book = (props) => {
-  const book = props.book;
+  const { book } = props;
 
-
-  return(
+  return (
     <div className="panel">
       <div className="first">
         <h5>{book.category}</h5>
