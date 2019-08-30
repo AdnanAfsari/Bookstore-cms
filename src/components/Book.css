@@ -10,6 +10,7 @@
 p {
   color: #4386bf;
 }
+
 h5 {
   color: gray;
 }
@@ -18,6 +19,7 @@ h5 {
   display: flex;
   color: #4386bf;
 }
+
 .meta {
   margin-right: 30px;
   padding-right: 10px;

@@ -1,15 +1,12 @@
 import React from 'react';
-import { bookCategories } from '../utils'
-
+import { bookCategories } from '../utils';
 
 
 const filterCategories = [...['All'], ...bookCategories];
 
 class CategoryFilter extends React.Component {
   render() {
-    const filterOptions = filterCategories.map((category) => {
-      return <option key={category} value={category}>{category}</option>
-    });
+    const filterOptions = filterCategories.map((category) => <option key={category} value={category}>{category}</option>);
 
     return (
       <div>

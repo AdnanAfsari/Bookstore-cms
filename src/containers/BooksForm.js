@@ -1,29 +1,29 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
-import { bookCategories, generateID } from '../utils'
+import { bookCategories, generateID } from '../utils';
 
 const styles = {
   input: {
-    marginRight: "10px",
-    height: "45px",
-    width: "60%",
-    fontSize: "18px"
+    marginRight: '10px',
+    height: '45px',
+    width: '60%',
+    fontSize: '18px',
   },
   select: {
-    marginRight: "10px",
-    height: "50px",
-    width: "20%",
-    fontSize: "18px"
+    marginRight: '10px',
+    height: '50px',
+    width: '20%',
+    fontSize: '18px',
   },
   button: {
-    width: "18%",
-    background: "#0290ff",
-    color: "#fff",
-    padding: "16px",
-    fontSize: "18px"
-  }
-}
+    width: '18%',
+    background: '#0290ff',
+    color: '#fff',
+    padding: '16px',
+    fontSize: '18px',
+  },
+};
 
 
 class BooksForm extends React.Component {
@@ -31,7 +31,7 @@ class BooksForm extends React.Component {
     super(props);
     this.state = {
       title: '',
-      category: 'Action'
+      category: 'Action',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -39,11 +39,11 @@ class BooksForm extends React.Component {
   }
 
   handleChange(event) {
-    const name = event.target.name;
+    const { name } = event.target;
 
     this.setState({
-      [name]: event.target.value
-    })
+      [name]: event.target.value,
+    });
   }
 
   handleSubmit(event) {
@@ -52,21 +52,19 @@ class BooksForm extends React.Component {
     this.props.createBook({
       id: generateID(),
       title: this.state.title,
-      category: this.state.category
+      category: this.state.category,
     });
 
     this.setState({
       title: '',
-      category: 'Action'
+      category: 'Action',
     });
 
     event.target.reset();
   }
 
   render() {
-    const bookOptions = bookCategories.map((category) => {
-      return <option key={category} value={category}>{category}</option>
-    });
+    const bookOptions = bookCategories.map((category) => <option key={category} value={category}>{category}</option>);
 
     return (
       <div>
@@ -74,13 +72,12 @@ class BooksForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} style={styles.input} type="text" name="title" placeholder="Title" />
           <select onChange={this.handleChange} style={styles.select} name="category" value="category">{bookOptions}</select>
-          <input style={styles.button} type="submit" value="ADD BOOK"/>
+          <input style={styles.button} type="submit" value="ADD BOOK" />
         </form>
       </div>
-    )
+    );
   }
 }
 
 
-
-export default connect(null, {createBook})(BooksForm);
+export default connect(null, { createBook })(BooksForm);

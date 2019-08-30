@@ -16,17 +16,14 @@ const Book = (props) => {
           <div className="meta">Edit</div>
         </div>
       </div>
-      <div className="second"></div>
+      <div className="second" />
       <div className="third">
         <h5>CURRENT CHAPTER</h5>
         <h5> CHAPTER 17</h5>
         <button>UPDATE PROGRESS</button>
       </div>
     </div>
-  )
-
-
-}
-
+  );
+};
 
 export default Book;
