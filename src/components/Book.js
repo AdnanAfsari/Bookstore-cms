@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Book.css';
 
 const Book = (props) => {
@@ -12,7 +13,7 @@ const Book = (props) => {
         <p>Suzanne Collins</p>
         <div className="meta-panel">
           <div className="meta">Comments</div>
-          <div className="meta"><button onClick={() => props.handleBookRemove(book)}>Remove Book</button></div>
+          <div className="meta"><button type="button" onClick={() => props.handleBookRemove(book)}>Remove Book</button></div>
           <div className="meta">Edit</div>
         </div>
       </div>
@@ -20,10 +21,15 @@ const Book = (props) => {
       <div className="third">
         <h5>CURRENT CHAPTER</h5>
         <h5> CHAPTER 17</h5>
-        <button>UPDATE PROGRESS</button>
+        <div className="button">UPDATE PROGRESS</div>
       </div>
     </div>
   );
+};
+
+Book.propTypes = {
+  book: PropTypes.instanceOf(Object).isRequired,
+  handleBookRemove: PropTypes.func.isRequired,
 };
 
 export default Book;

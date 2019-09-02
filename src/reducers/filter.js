@@ -3,6 +3,6 @@ export default (state = 'All', action) => {
     case 'CHANGE_FILTER':
       return action.filter;
     default:
-      return 'All';
+      return state;
   }
 };

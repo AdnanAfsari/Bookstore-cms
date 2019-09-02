@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 import { bookCategories, generateID } from '../utils';
@@ -29,6 +30,7 @@ const styles = {
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       title: '',
       category: 'Action',
@@ -47,12 +49,15 @@ class BooksForm extends React.Component {
   }
 
   handleSubmit(event) {
+    const { title, category } = this.state;
+
     event.preventDefault();
 
+    // eslint-disable-next-line
     this.props.createBook({
       id: generateID(),
-      title: this.state.title,
-      category: this.state.category,
+      title,
+      category,
     });
 
     this.setState({
@@ -64,7 +69,8 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const bookOptions = bookCategories.map((category) => <option key={category} value={category}>{category}</option>);
+    const bookOptions = bookCategories.map((category) => (
+      <option key={category} value={category}>{category}</option>));
 
     return (
       <div>
@@ -78,6 +84,11 @@ class BooksForm extends React.Component {
     );
   }
 }
+
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
 
 
 export default connect(null, { createBook })(BooksForm);

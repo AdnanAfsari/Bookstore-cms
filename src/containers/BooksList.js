@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { changeFilter, removeBook } from '../actions';
@@ -13,10 +14,17 @@ const filteredBooks = (books, filter) => {
 };
 
 const BooksList = (props) => {
-  const handleFilterChange = (event) => props.changeFilter(event.target.value);
-  const handleBookRemove = (book) => props.removeBook(book);
+  const {
+    changeFilter, removeBook, filter,
+  } = props;
 
-  const books = filteredBooks(props.books, props.filter).map((book) => <Book key={book.id} book={book} handleBookRemove={handleBookRemove} />);
+
+  const handleFilterChange = (event) => changeFilter(event.target.value);
+  const handleBookRemove = (book) => removeBook(book);
+
+  // eslint-disable-next-line
+  const books = filteredBooks(props.books, filter).map((book) => (
+    <Book key={book.id} book={book} handleBookRemove={handleBookRemove} />));
 
   return (
     <div>
@@ -31,5 +39,14 @@ const mapStateToProps = (state) => ({
   books: state.books,
   filter: state.filter,
 });
+
+
+BooksList.propTypes = {
+  changeFilter: PropTypes.func.isRequired,
+  removeBook: PropTypes.func.isRequired,
+  books: PropTypes.instanceOf(Object).isRequired,
+  filter: PropTypes.func.isRequired,
+
+};
 
 export default connect(mapStateToProps, { changeFilter, removeBook })(BooksList);
