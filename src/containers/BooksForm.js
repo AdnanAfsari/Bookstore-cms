@@ -33,6 +33,7 @@ class BooksForm extends React.Component {
 
     // Validating the input form
     if (title === '' || category === '') {
+      // eslint-disable-next-line
       alert('Title can\'t be blank');
       return;
     }
@@ -53,8 +54,8 @@ class BooksForm extends React.Component {
   }
 
   render() {
-    const bookOptions = bookCategories.map((category) => (
-      <option key={category} value={category}>{category}</option>));
+    const bookOptions = bookCategories.map((category) =>
+      <option key={category} value={category}>{category}</option>);
 
     return (
       <div>

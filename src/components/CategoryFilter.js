@@ -8,8 +8,8 @@ const filterCategories = [...['All'], ...bookCategories];
 
 const CategoryFilter = (props) => {
   const { handleFilterChange } = props;
-  const filterOptions = filterCategories.map((category) => (
-    <option key={category} value={category}>{category}</option>));
+  const filterOptions = filterCategories.map((category) =>
+    <option key={category} value={category}>{category}</option>);
   return (
     <div>
       <b>Filter by:</b>
