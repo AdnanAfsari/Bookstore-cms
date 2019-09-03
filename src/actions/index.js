@@ -1,21 +1,14 @@
-export const createBook = (book) => {
-  return {
+export const createBook = (book) => ({
     type: 'CREATE_BOOK',
     book
-  }
-};
+  })
 
-export const removeBook = (id) => {
-  return {
+export const removeBook = (id) => ({
     type: 'REMOVE_BOOK',
     id
-  }
-};
+  })
 
-export const changeFilter = (filter) => {
-  return {
+export const changeFilter = (filter) => ({
     type: 'CHANGE_FILTER',
     filter
-  }
-
-};
+  })
