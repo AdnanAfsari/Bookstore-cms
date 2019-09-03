@@ -14,16 +14,14 @@ const filteredBooks = (books, filter) => {
 };
 
 
-
 const BooksList = (props) => {
   const {
-    changeFilter, removeBook, filter
+    changeFilter, removeBook, filter,
   } = props;
 
 
   const handleFilterChange = (event) => changeFilter(event.target.value);
   const handleBookRemove = (book) => removeBook(book);
-
 
 
   // eslint-disable-next-line
