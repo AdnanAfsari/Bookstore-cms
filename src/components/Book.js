@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Book.css';
+import '../styles/Book.css';
 
 const Book = (props) => {
   const { book } = props;
@@ -21,7 +21,7 @@ const Book = (props) => {
       <div className="third">
         <h5>CURRENT CHAPTER</h5>
         <h5> CHAPTER 17</h5>
-        <div className="button">UPDATE PROGRESS</div>
+        <div className="prog-button">UPDATE PROGRESS</div>
       </div>
     </div>
   );

@@ -3,28 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 import { bookCategories, generateID } from '../utils';
-
-const styles = {
-  input: {
-    marginRight: '10px',
-    height: '45px',
-    width: '60%',
-    fontSize: '18px',
-  },
-  select: {
-    marginRight: '10px',
-    height: '50px',
-    width: '20%',
-    fontSize: '18px',
-  },
-  button: {
-    width: '18%',
-    background: '#0290ff',
-    color: '#fff',
-    padding: '16px',
-    fontSize: '18px',
-  },
-};
+import '../styles/BooksForm.css';
 
 
 class BooksForm extends React.Component {
@@ -51,6 +30,12 @@ class BooksForm extends React.Component {
   handleSubmit(event) {
     const { title, category } = this.state;
 
+    // Validating the input form
+    if (title === '' || category === '') {
+      alert('Title can\'t be blank');
+      return;
+    }
+
     event.preventDefault();
 
     // eslint-disable-next-line
@@ -64,8 +49,6 @@ class BooksForm extends React.Component {
       title: '',
       category: 'Action',
     });
-
-    event.target.reset();
   }
 
   render() {
@@ -76,9 +59,9 @@ class BooksForm extends React.Component {
       <div>
         <h3>ADD NEW BOOK</h3>
         <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} style={styles.input} type="text" name="title" placeholder="Title" />
-          <select onChange={this.handleChange} style={styles.select} name="category" value="category">{bookOptions}</select>
-          <input style={styles.button} type="submit" value="ADD BOOK" />
+          <input onChange={this.handleChange} className="input" type="text" name="title" value={this.state.title} placeholder="Title" />
+          <select onChange={this.handleChange} className="select" name="category" value={this.state.category}>{bookOptions}</select>
+          <input className="button" type="submit" value="ADD BOOK" />
         </form>
       </div>
     );

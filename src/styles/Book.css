@@ -38,7 +38,8 @@ h5 {
   width: 20%;
 }
 
-.third .button {
+.third .prog-button {
+  text-align: center;
   padding: 10px;
   color: #fff;
   border-radius: 3px;

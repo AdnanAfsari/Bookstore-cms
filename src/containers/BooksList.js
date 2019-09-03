@@ -13,14 +13,18 @@ const filteredBooks = (books, filter) => {
   return books.filter((book) => book.category === filter);
 };
 
+
+
 const BooksList = (props) => {
   const {
-    changeFilter, removeBook, filter,
+    changeFilter, removeBook, filter
   } = props;
 
 
   const handleFilterChange = (event) => changeFilter(event.target.value);
   const handleBookRemove = (book) => removeBook(book);
+
+
 
   // eslint-disable-next-line
   const books = filteredBooks(props.books, filter).map((book) => (
@@ -45,7 +49,7 @@ BooksList.propTypes = {
   changeFilter: PropTypes.func.isRequired,
   removeBook: PropTypes.func.isRequired,
   books: PropTypes.instanceOf(Object).isRequired,
-  filter: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
 
 };
 
