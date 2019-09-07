@@ -19,3 +19,8 @@
   padding: 16px;
   font-size: 18px;
 }
+
+
+.error {
+  color: red;
+}
