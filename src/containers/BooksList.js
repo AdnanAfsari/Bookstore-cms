@@ -10,18 +10,18 @@ const filteredBooks = (books, filter) => {
   if (filter === 'All') {
     return books;
   }
-  return books.filter((book) => book.category === filter);
+  return books.filter(book => book.category === filter);
 };
 
 
-const BooksList = (props) => {
+const BooksList = props => {
   const {
     changeFilter, removeBook, filter,
   } = props;
 
 
-  const handleFilterChange = (event) => changeFilter(event.target.value);
-  const handleBookRemove = (book) => removeBook(book);
+  const handleFilterChange = event => changeFilter(event.target.value);
+  const handleBookRemove = book => removeBook(book);
 
 
   // eslint-disable-next-line
@@ -37,7 +37,7 @@ const BooksList = (props) => {
 };
 
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   books: state.books,
   filter: state.filter,
 });
