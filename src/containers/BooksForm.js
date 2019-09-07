@@ -13,7 +13,7 @@ class BooksForm extends React.Component {
     this.state = {
       title: '',
       category: 'Action',
-      error: null
+      error: null,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -36,8 +36,8 @@ class BooksForm extends React.Component {
     // Validating the input form
     if (title === '') {
       this.setState({
-        error: 'Error: Title cannot be blank'
-      })
+        error: 'Error: Title cannot be blank',
+      });
     }
 
     event.preventDefault();
