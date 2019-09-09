@@ -26,7 +26,6 @@
     "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "react/state-in-constructor": [0, "never"],
-      "react/destructuring-assignment": [0, "never"],
       "react/destructuring-assignment": [0, "never", { "ignoreClassFields": "true" }],
       "react/prop-types": 0,
       "no-param-reassign": ["error", { "props": false }],

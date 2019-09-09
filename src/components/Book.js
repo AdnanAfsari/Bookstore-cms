@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Book.css';
 
-const Book = (props) => {
+const Book = props => {
   const { book } = props;
 
   return (
