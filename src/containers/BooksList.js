@@ -14,7 +14,7 @@ const filteredBooks = (books, filter) => {
 };
 
 
-const BooksList = (props) => {
+const BooksList = props => {
   const {
     changeFilter, removeBook, filter,
   } = props;
