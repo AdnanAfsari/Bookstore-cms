@@ -31,13 +31,17 @@ class BooksForm extends React.Component {
 
   handleSubmit(event) {
     // eslint-disable-next-line
-    const { title, category, error } = this.state;
+    const { title, category } = this.state;
 
     // Validating the input form
     if (title === '') {
       this.setState({
         error: 'Error: Title cannot be blank',
-      });
+      })
+    } else {
+      this.setState({
+        error: null,
+      })
     }
 
     event.preventDefault();
