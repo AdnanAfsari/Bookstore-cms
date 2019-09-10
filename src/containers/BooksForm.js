@@ -30,7 +30,6 @@ class BooksForm extends React.Component {
   }
 
   handleSubmit(event) {
-    // eslint-disable-next-line
     const { title, category } = this.state;
 
     // Validating the input form

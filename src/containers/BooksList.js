@@ -23,8 +23,7 @@ const BooksList = props => {
   const handleFilterChange = event => changeFilter(event.target.value);
 
 
-  // eslint-disable-next-line
-  const books = filteredBooks(props.books, filter).map((book) => (
+  const books = filteredBooks(props.books, filter).map(book => (
     <Book key={book.id} book={book} handleBookRemove={removeBook} />));
 
   return (

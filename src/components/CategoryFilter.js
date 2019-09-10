@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { bookCategories } from '../utils';
 
 
-const filterCategories = [...['All'], ...bookCategories];
+const filterCategories = ['All', ...bookCategories];
 
 
 const CategoryFilter = props => {
