@@ -37,11 +37,11 @@ class BooksForm extends React.Component {
     if (title === '') {
       this.setState({
         error: 'Error: Title cannot be blank',
-      })
+      });
     } else {
       this.setState({
         error: null,
-      })
+      });
     }
 
     event.preventDefault();
