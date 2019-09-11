@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "airbnb"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+
+    "parser": "babel-eslint",
+
+    "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/state-in-constructor": [0, "never"],
+      "react/destructuring-assignment": [0, "never", { "ignoreClassFields": "true" }],
+      "react/prop-types": 0,
+      "no-param-reassign": ["error", { "props": false }],
+      "import/extensions": "off",
+      "arrow-parens": [2, "as-needed"],
+      "import/no-named-as-default": 0,
+      "no-named-as-default-member": 0,
+      "no-nested-ternary": 0,
+      "no-unused-expressions": 0,
+      "no-restricted-globals": 0,
+      "import/no-unresolved": "off",
+      "no-shadow": 0
+    }
+}

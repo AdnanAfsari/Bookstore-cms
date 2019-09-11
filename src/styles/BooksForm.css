@@ -1,0 +1,26 @@
+.input {
+  margin-right: 10px;
+  height: 45px;
+  width: 60%;
+  font-size: 18px;
+}
+
+.select {
+  margin-right: 10px;
+  height: 50px;
+  width: 20%;
+  font-size: 18px;
+}
+
+.button {
+  width: 18%;
+  background: #0290ff;
+  color: #fff;
+  padding: 16px;
+  font-size: 18px;
+}
+
+
+.error {
+  color: red;
+}
