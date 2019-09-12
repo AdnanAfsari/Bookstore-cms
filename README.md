@@ -50,7 +50,7 @@ Your app is ready to be deployed!
 
 ## Link to live version hosted on Heroku
 
-[react-calculator live version](https://adnan-james-bookstore.herokuapp.com/)
+[Bookstore-cms live version](https://adnan-james-bookstore.herokuapp.com/)
 
 
 ## Author
