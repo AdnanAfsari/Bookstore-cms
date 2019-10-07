@@ -2,6 +2,8 @@
 
 This is a React.js Redux Bookstore CMS project.
 
+![Bookstore UI](bookstore.png)
+
 ## Requirements
 
 - Node.js
