@@ -1,4 +1,4 @@
-## React calculator
+## Bookstore-CMS
 
 This is a React.js Redux Bookstore CMS project.
 
