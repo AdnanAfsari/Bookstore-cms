@@ -1,8 +1,23 @@
-## Bookstore-CMS
+# Bookstore-CMS
 
-This is a React.js Redux Bookstore CMS project.
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+> Bookstore-CMS. [Live demo](https://adnan-james-bookstore.herokuapp.com/)
 
 ![Bookstore UI](bookstore.png)
+
+## Table of Contents
+
+- [React-calculator](#React-calculator)
+  - [Table of Contents](#table-of-contents)
+  - [Background](#background)
+  - [Requirements](#requirements)
+  - [Install](#install)
+  - [Author](#author)
+
+## Background
+
+# This is a Library Menagement system built with React and Redux.
 
 ## Requirements
 
@@ -20,43 +35,21 @@ This is a React.js Redux Bookstore CMS project.
 
 - ES6
 
-## Installation
+## Install
 
-Visit https://github.com/AdnanAfsari/Bookstore-cms to clone the project `cd` into the project directory and run `npm install`
+- Clone this repo https://github.com/AdnanAfsari/Bookstore-cms
 
-## Available Scripts
+- `cd` to cloned repository folder `Bookstore-cms`
 
-In the project directory, you can run:
+- in terminal run `yarn install` or `npm install`
 
-### `npm start`
+- Run `npm start` to stat the app in development mode
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-
-
-## Link to live version hosted on Heroku
-
-[Bookstore-cms live version](https://adnan-james-bookstore.herokuapp.com/)
+- Run `npm test` to start the test runner
 
 
 ## Author
 
 - [Adnan Afsari](https://github.com/AdnanAfsari)
-
 - [James Okunlade](https://github.com/JamesOkunlade)
+
