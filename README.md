@@ -17,7 +17,7 @@
 
 ## Background
 
-# This is a Library Menagement system built with React and Redux.
+# This is a Library Management system built with React and Redux.
 
 ## Requirements
 
